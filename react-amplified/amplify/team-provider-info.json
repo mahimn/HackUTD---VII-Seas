@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-taxapp-dev-165541-authRole",
+      "UnauthRoleArn": "arn:aws:iam::409892867348:role/amplify-taxapp-dev-165541-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::409892867348:role/amplify-taxapp-dev-165541-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-taxapp-dev-165541-deployment",
+      "UnauthRoleName": "amplify-taxapp-dev-165541-unauthRole",
+      "StackName": "amplify-taxapp-dev-165541",
+      "StackId": "arn:aws:cloudformation:us-east-2:409892867348:stack/amplify-taxapp-dev-165541/ecfdfb50-794e-11eb-9524-0212e61935fe",
+      "AmplifyAppId": "d2maw1sp3rqhku"
+    }
+  }
+}
