@@ -4,24 +4,36 @@ import Amplify, { API, graphqlOperation } from 'aws-amplify'
 import { createTodo } from './graphql/mutations'
 import { listTodos } from './graphql/queries'
 import { withAuthenticator } from '@aws-amplify/ui-react'
+import logo from './logo.png'
+import './App.css'
 
 import awsExports from "./aws-exports";
 Amplify.configure(awsExports);
 
 const initialState = { name: '', description: '' }
 
+/*
+Main Parameters for 1080 Creation:
+
+First Name
+Middle Initial
+Last Name
+Filing Status (Checkbox)
+
+*/
+
 const App = () => {
   const [formState, setFormState] = useState(initialState)
-  const [todos, setTodos] = useState([])
+  // const [todos, setTodos] = useState([])
 
   useEffect(() => {
-    fetchTodos()
+    // fetchTodos()
   }, [])
 
   function setInput(key, value) {
     setFormState({ ...formState, [key]: value })
   }
-
+/*
   async function fetchTodos() {
     try {
       const todoData = await API.graphql(graphqlOperation(listTodos))
@@ -40,32 +52,14 @@ const App = () => {
     } catch (err) {
       console.log('error creating todo:', err)
     }
-  }
+  } */
 
   return (
     <div style={styles.container}>
-      <h2>Amplify Todos</h2>
-      <input
-        onChange={event => setInput('name', event.target.value)}
-        style={styles.input}
-        value={formState.name}
-        placeholder="Name"
-      />
-      <input
-        onChange={event => setInput('description', event.target.value)}
-        style={styles.input}
-        value={formState.description}
-        placeholder="Description"
-      />
-      <button style={styles.button} onClick={addTodo}>Create Todo</button>
-      {
-        todos.map((todo, index) => (
-          <div key={todo.id ? todo.id : index} style={styles.todo}>
-            <p style={styles.todoName}>{todo.name}</p>
-            <p style={styles.todoDescription}>{todo.description}</p>
-          </div>
-        ))
-      }
+      <h2>Welcome to Comet Tax!</h2>
+      <h3>A better tax software designed by students, for students.</h3>
+      <img src={logo} className="App-logo" alt="logo" />
+
     </div>
   )
 }
@@ -76,7 +70,7 @@ const styles = {
   input: { border: 'none', backgroundColor: '#ddd', marginBottom: 10, padding: 8, fontSize: 18 },
   todoName: { fontSize: 20, fontWeight: 'bold' },
   todoDescription: { marginBottom: 0 },
-  button: { backgroundColor: 'black', color: 'white', outline: 'none', fontSize: 18, padding: '12px 0px' }
+  button: { backgroundColor: '#C44B3D', color: 'white', outline: 'none', fontSize: 18, padding: '12px 0px' }
 }
 
 export default withAuthenticator(App)
