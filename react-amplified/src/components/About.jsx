@@ -15,7 +15,11 @@ function About() {
           <div class="col-lg-5">
             <h1 class="font-weight-light">About</h1>
             <p>
-              AKCS is a group of four strong men of the seven seas.
+              AKCS is a group of four strong men of the seven seas. We are a diverse group ranging from majors like finance
+              to computer science. However, what brought this uncanny gang together is the pursuit for honing our skills, a
+              thirst for challenges and a moving motivation to perform social good. Through this hackathon, AKCS took its
+              first step on the journey of self and community development by creating a financial tool to prepare college
+              students for tax season while offering insight into the financial world and how they can best be aware of it.
             </p>
           </div>
         </div>

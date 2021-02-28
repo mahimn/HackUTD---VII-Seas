@@ -1,0 +1,70 @@
+.formengine-title{
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgba(190, 33, 22, 0.774);
+}
+
+.taxes{
+  margin: auto auto auto auto;
+  width: 500px;
+  height: auto;
+  padding: 2.5rem;
+  background-color: rgba(190, 33, 22, 0.774);
+  border-radius: 50px;
+}
+
+.question{
+  margin: 0 auto 1rem auto;
+}
+label{
+  font-size: 20px;
+  color: white;
+}
+.field{
+  display: block;
+  width: 100%;
+  line-height: 25px;
+  margin: 5px auto 5px auto;
+  font-family: monospace;
+  font-size: 15px;
+  color: #495057;
+  border: 2px solid #ced4da;
+  border-radius:.25rem;
+}
+.radio-input{
+  display: inline-block;
+  margin: auto auto auto auto;
+}
+.checkbox-input{
+  display: inline-block;
+  margin: 10 auto auto auto;
+}
+.other{
+  width: 50%;
+  line-height: 25px;
+  margin: 5px auto 5px auto;
+  font-family: monospace;
+  font-size: 15px;
+  color: #495057;
+  border: 2px solid #ced4da;
+  border-radius:.25rem;
+}
+.textarea-input{
+  display: block;
+  width: 100%;
+  line-height: 25px;
+  height: 150px;
+  margin: 5px auto 5px auto;
+  font-family: monospace;
+  color: #495057;
+  border: 2px solid #ced4da;
+}
+.submit{
+  background-color: rgb(253 35 31);
+  width: 100%;
+  height: 50px;
+  font-size: 20px;
+  color: white;
+  border: 1px solid rgb(253 35 31);
+  border-radius: 10px;
+}

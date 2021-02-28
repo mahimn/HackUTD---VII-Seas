@@ -14,12 +14,15 @@ function Resources() {
           </div>
           <div class="col-lg-5">
             <h1 class="font-weight-light">Resources</h1>
+            <b/>
+            <h3> Extra information sources/ tools to help you along the way! </h3>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
-            </p>
+              <a href="https://bursar.utdallas.edu/" > UTD Bursar's Office </a>
+              <b/><b/>
+              <a href ="https://idp.utdallas.edu/idp/profile/SAML2/Unsolicited/SSO?providerId=touchnet-prod-tbp" > EZPAY (For UTD Students) </a>
+              <b/><b/>
+              <a href ="https://www.self.inc/blog/guide-to-tax-season-for-students"> An insightful blog post detailing what you should know heading into Tax Season </a> 
+              </p>
           </div>
         </div>
       </div>
