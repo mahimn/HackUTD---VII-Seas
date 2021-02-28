@@ -7,12 +7,19 @@ import { withAuthenticator } from '@aws-amplify/ui-react'
 import logo from './logo.png'
 import './App.css'
 
+// Chatbot Modules
 import Chatbot from 'react-chatbot-kit'
 import ActionProvider from './ActionProvider';
 import MessageParser from './MessageParser';
 import config from './config';
 
+// Components
 import GradientBackground from "./components/GradientBackground/GradientBackground";
+// import Menu from "./components/Menu/Menu";
+
+// Multi-Pages
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Navigation, Footer, Home, About, FormEngine, Resources } from "./components";
 
 import awsExports from "./aws-exports";
 Amplify.configure(awsExports);
@@ -21,17 +28,16 @@ const initialState = { name: '', description: '' }
 
 /*
 Main Parameters for 1080 Creation:
-
 First Name
 Middle Initial
 Last Name
 Filing Status (Checkbox)
-
 */
 
 const App = () => {
   const [formState, setFormState] = useState(initialState)
   const [showBot, toggleBot] = useState(false);
+  const [showChatbot, toggleChatbot] = useState(true);
   // const [todos, setTodos] = useState([])
 
   useEffect(() => {
@@ -73,28 +79,20 @@ const App = () => {
     }
   } */
 
-  return (
+  // Main Render of the React Site
+  return ( 
     <div style={styles.container}>
-      <GradientBackground>
-      <h2 style={ hStyle }>Welcome to Comet Tax!</h2>
-      <h3 style={{ color: 'white' }}>A better tax companion designed by students, for students.</h3>
-      <h4 style={{ color: 'white' }}>Let's get started with some preliminary information.</h4>
-      <img src={logo} className="App-logo" alt="logo" />
-      <div style={{display: 'flex', justifyContent:'flex-end'}}>
-        {showBot && (
-          <Chatbot
-            config={config}
-            actionProvider={ActionProvider}
-            messageHistory={loadMessages()}
-            messageParser={MessageParser}
-            saveMessages={saveMessages}
-          />
-        )}
-        <button onClick={() => toggleBot((prev) => !prev)}>CosmoBot</button>
-      </div>
-      </GradientBackground>
+      <Router>
+        <Navigation />
+        <Switch>
+          <Route path="/" exact component={() => <Home />} />
+          <Route path="/about" exact component={() => <About />} />
+          <Route path="/formengine" exact component={() => <FormEngine />} />
+          <Route path="/resources" exact component={() => <Resources />} />
+        </Switch>
+        <Footer />
+      </Router>
     </div>
-
   )
 }
 

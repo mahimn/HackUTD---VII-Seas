@@ -6,10 +6,9 @@ const config = {
   botName: "Cosmo",
   initialMessages: [createChatBotMessage("Hi, I'm Cosmo. I'm here to help students with their taxes. What do you want to learn?", {
       widget: "learningOptions",
-  })
-],
-...LearningOptions,
-widgets: [
+    })
+  ],
+  widgets: [
         {
             widgetName: "learningOptions",
             widgetFunc: (props) => <LearningOptions {...props} />,
