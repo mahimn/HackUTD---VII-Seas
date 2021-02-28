@@ -50,6 +50,8 @@ const App = () => {
     const messages = JSON.parse(localStorage.getItem("chat_messages"));
     return messages;
   };
+
+  const hStyle = { color: '#C44B3D' };
 /*
   async function fetchTodos() {
     try {
@@ -74,8 +76,9 @@ const App = () => {
   return (
     <div style={styles.container}>
       <GradientBackground>
-      <h2>Welcome to Comet Tax!</h2>
-      <h3>A better tax companion designed by students, for students.</h3>
+      <h2 style={ hStyle }>Welcome to Comet Tax!</h2>
+      <h3 style={{ color: 'white' }}>A better tax companion designed by students, for students.</h3>
+      <h4 style={{ color: 'white' }}>Let's get started with some preliminary information.</h4>
       <img src={logo} className="App-logo" alt="logo" />
       <div style={{display: 'flex', justifyContent:'flex-end'}}>
         {showBot && (
