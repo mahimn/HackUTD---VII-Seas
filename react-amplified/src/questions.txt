@@ -1,0 +1,69 @@
+      <form id = "taxes">
+        <div class = "question">
+          <label id = "lastname-label" for = "firstname"> First Name </label>
+            <input type = "text" name = "firstname" id = "firstname" class = "field" placeholder= "Enter your first name" required />
+        </div>
+        <div class = "question">    
+          <label id = "mi-label" for = "mInit"> Middle Initial </label>
+            <input type = "text" name = "mInit" id = "mInit" class = "field" placeholder= "Enter your middle Initial" required />
+        </div>
+        <div class = "question">
+          <label id = "name-label" for = "lastname"> Last Name </label>
+            <input type = "text" name = "name" id = "name" class = "field" placeholder= "Enter your last name" required />
+        </div>
+        <div class = "question">
+          <label id = "status-label" for = "status"> How are you filing your taxes? </label>
+          <br/><br/>
+          <label><input name = "status" value = "Single" type = "radio" class = "radio-input" /> Single </label>
+          <br/>
+          <label><input name = "status" value = "Joint" type = "radio" class = "radio-input" /> Married filing jointly </label>
+          <br/>
+          <label><input name = "status" value = "Separately" type = "radio" class = "radio-input" /> Married filing separately </label>
+          <br/>
+        </div>
+        <div class = "question">
+          <label id = "social-security" for = "socialsecurity"> Social Security Number </label>
+            <input type = "text" name = "socialsecurity" id = "socialsecurity" class = "field" placeholder= "Enter your social security number" required />
+        </div>
+        <div class = "question">
+          <label id = "US-label" for = "US"> Do you live in the US? </label>
+          <br/><br/>
+          <label><input name = "US" value = "Yes" type = "radio" class = "radio-input" /> Yes </label>
+          <br/>
+          <label><input name = "US" value = "No" type = "radio" class = "radio-input" /> No </label>
+          <br/>
+        </div>
+        <div class = "question">
+          <label id = "address-label" for = "address"> Home Address (Number and Street) </label>
+            <input type = "text" name = "address" id = "address" class = "field" placeholder= "Enter your address" required />
+        </div>
+        <div class = "question">
+          <label id = "spt-no-label" for = "aptno"> Apartment number (if applicable) </label>
+            <input type = "text" name = "aptno" id = "aptno" class = "field" placeholder= "Enter your apartment number" />
+        </div>
+        <div class = "question">
+          <label id = "addresstwo-label" for = "city"> City/town </label>
+            <input type = "text" name = "city" id = "city" class = "field" placeholder= "Enter your city/town" required />
+        </div>
+        <div class = "question">
+          <label id = "state-label" for = "state"> State </label>
+            <input type = "text" name = "state" id = "state" class = "field" placeholder= "state" required />
+        </div>
+        <div class = "question">
+          <label id = "zipcode-label" for = "zipcode"> ZIP code </label>
+            <input type = "text" name = "zipcode" id = "zipcode" class = "field" placeholder= "Enter your ZIP Code" required />
+        </div>
+        <div class = "question">
+          <label id = "dependence-label" for = "dependence"> Someone can claim: </label>
+          <br/><br/>
+          <label><input name = "dependence" value = "You" type = "radio" class = "checkbox" /> You are a dependent </label>
+          <br/>
+          <label><input name = "dependence" value = "Spouse" type = "radio" class = "radio-input" /> Your spouse as a dependent </label>
+          <br/>
+        </div>
+        <div class = "question">
+          <label id = "wages-label" for = "wages"> How much did you make in wages, salaries, tips, etc.? Refer to W2 if needed. </label>
+            <input type = "text" name = "wages" id = "wages" class = "field" placeholder= "Enter wages" required />
+        </div>
+      </form>
+    </div>
