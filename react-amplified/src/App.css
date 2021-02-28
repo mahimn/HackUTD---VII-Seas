@@ -1,12 +1,12 @@
 .App {
-  text-align: left;
+  text-align: center;
 }
 
 .App-logo {
   height: 40vmin;
   width: 40vmin;
   pointer-events: none;
-  justify-content: center;
+  justify-self: start;
 }
 
 @media (prefers-reduced-motion: no-preference) {

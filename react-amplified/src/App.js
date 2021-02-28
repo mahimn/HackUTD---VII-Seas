@@ -87,7 +87,7 @@ const App = () => {
             saveMessages={saveMessages}
           />
         )}
-        <button onClick={() => toggleBot((prev) => !prev)}>Cosmo Bot</button>
+        <button onClick={() => toggleBot((prev) => !prev)}>CosmoBot</button>
       </div>
       </GradientBackground>
     </div>
