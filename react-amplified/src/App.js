@@ -1,11 +1,18 @@
 /* src/App.js */
 import React, { useEffect, useState } from 'react'
 import Amplify, { API, graphqlOperation } from 'aws-amplify'
-import { createTodo } from './graphql/mutations'
-import { listTodos } from './graphql/queries'
+// import { createTodo } from './graphql/mutations'
+// import { listTodos } from './graphql/queries'
 import { withAuthenticator } from '@aws-amplify/ui-react'
 import logo from './logo.png'
 import './App.css'
+
+import Chatbot from 'react-chatbot-kit'
+import ActionProvider from './ActionProvider';
+import MessageParser from './MessageParser';
+import config from './config';
+
+import GradientBackground from "./components/GradientBackground/GradientBackground";
 
 import awsExports from "./aws-exports";
 Amplify.configure(awsExports);
@@ -24,6 +31,7 @@ Filing Status (Checkbox)
 
 const App = () => {
   const [formState, setFormState] = useState(initialState)
+  const [showBot, toggleBot] = useState(false);
   // const [todos, setTodos] = useState([])
 
   useEffect(() => {
@@ -33,6 +41,15 @@ const App = () => {
   function setInput(key, value) {
     setFormState({ ...formState, [key]: value })
   }
+
+  const saveMessages = (messages) => {
+    localStorage.setItem("chat_messages", JSON.stringify(messages));
+  };
+
+  const loadMessages = () => {
+    const messages = JSON.parse(localStorage.getItem("chat_messages"));
+    return messages;
+  };
 /*
   async function fetchTodos() {
     try {
@@ -56,16 +73,30 @@ const App = () => {
 
   return (
     <div style={styles.container}>
+      <GradientBackground>
       <h2>Welcome to Comet Tax!</h2>
-      <h3>A better tax software designed by students, for students.</h3>
+      <h3>A better tax companion designed by students, for students.</h3>
       <img src={logo} className="App-logo" alt="logo" />
-
+      <div style={{display: 'flex', justifyContent:'flex-end'}}>
+        {showBot && (
+          <Chatbot
+            config={config}
+            actionProvider={ActionProvider}
+            messageHistory={loadMessages()}
+            messageParser={MessageParser}
+            saveMessages={saveMessages}
+          />
+        )}
+        <button onClick={() => toggleBot((prev) => !prev)}>Cosmo Bot</button>
+      </div>
+      </GradientBackground>
     </div>
+
   )
 }
 
 const styles = {
-  container: { width: 400, margin: '0 auto', display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: 20 },
+  container: { margin: '0 auto', display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: 20 },
   todo: {  marginBottom: 15 },
   input: { border: 'none', backgroundColor: '#ddd', marginBottom: 10, padding: 8, fontSize: 18 },
   todoName: { fontSize: 20, fontWeight: 'bold' },
