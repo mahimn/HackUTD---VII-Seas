@@ -31,13 +31,11 @@ const loadMessages = () => {
   return messages;
 };
 
-const bgstyle = { height: '100vh'}
-
 function Home() {
     const [showBot, toggleBot] = useState(false);
     const hStyle = { color: '#C44B3D' };
   return (
-    <div className="home" style={bgstyle}>
+    <div className="home">
       <div class="container">
         <h2 style={ hStyle } className = "title">Welcome to Comet Tax!</h2>
         <h3 style={{ color: 'white' }} className = "title" >A better tax companion designed by students, for students.</h3>
