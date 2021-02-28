@@ -22,5 +22,29 @@
                 }
             }
         }
+    },
+    "taxapp": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-taxapp-taxapp-202217-authRole",
+            "UnauthRoleArn": "arn:aws:iam::843855944736:role/amplify-taxapp-taxapp-202217-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::843855944736:role/amplify-taxapp-taxapp-202217-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "amplify-taxapp-taxapp-202217-deployment",
+            "UnauthRoleName": "amplify-taxapp-taxapp-202217-unauthRole",
+            "StackName": "amplify-taxapp-taxapp-202217",
+            "StackId": "arn:aws:cloudformation:us-east-2:843855944736:stack/amplify-taxapp-taxapp-202217/c8db2a00-796b-11eb-b5d7-0a1409966064",
+            "AmplifyAppId": "dlpg9uxm9v3rx"
+        },
+        "categories": {
+            "auth": {
+                "taxapp7a0b1700": {}
+            },
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "dlpg9uxm9v3rx",
+                    "type": "manual"
+                }
+            }
+        }
     }
 }
